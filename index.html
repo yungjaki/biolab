@@ -1,38 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BioLab Quest — Разширена</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioLab Adventures</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <canvas id="bgCanvas"></canvas>
   <canvas id="gameCanvas"></canvas>
 
-  <!-- MENU -->
   <div id="menu" class="glass">
-    <h1>🧬 <span class="gradient">BioLab Quest</span></h1>
-    <p>10 нива — образователни мини-игри по биология. Някои са по-предизвикателни!</p>
-    <div class="menu-row">
-      <button id="startBtn">🚀 Започни</button>
-      <button id="levelsBtn">📚 Нива</button>
-    </div>
-    <div id="levelsList" class="hidden-menu"></div>
+    <h1>🧬 <span class="gradient">BioLab Adventures</span></h1>
+    <p>Изследвай света на биологията чрез интерактивни нива!</p>
+    <button id="startBtn">🚀 Започни играта</button>
   </div>
 
-  <!-- HUD -->
-  <div id="hud" class="glass hidden">
-    <div id="levelTitle">Ниво 1</div>
-    <div id="progressWrap">
-      <div id="progressBar"><div id="progressFill"></div></div>
-      <div id="progressText">0 / 10</div>
+  <div id="ui" class="hidden glass">
+    <h2 id="levelTitle">Ниво 1: Клетъчен изследовател</h2>
+    <div id="progressContainer">
+      <div id="progressBar"></div>
     </div>
-    <div id="info" class="infoline"></div>
+    <p id="info"></p>
+    <div class="buttons">
+      <button id="nextLevelBtn" class="hidden">Следващо ниво ➡️</button>
+      <button id="skipBtn">⏭ Пропусни</button>
+    </div>
   </div>
-
-  <button id="nextLevelBtn" class="nextBtn hidden">Следващо ниво ➜</button>
-  <button id="backToMenu" class="topLeft hidden">🏠 Меню</button>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="game.js"></script>
